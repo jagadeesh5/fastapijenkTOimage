@@ -2,18 +2,16 @@ node {
     def app
 
     stage('Clone repository') {
-      
 
-        checkout scm
+        https://github.com/jagadeesh5/fastapijenkTOimage.git
     }
 
     stage('Build image') {
   
-       app = docker.build("narsimha2580/test")
+       app = docker.build("cricket0123/test")
     }
 
     stage('Test image') {
-  
 
         app.inside {
             sh 'echo "Tests passed"'
